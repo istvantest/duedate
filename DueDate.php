@@ -21,16 +21,18 @@ class DueDate {
 
     public function init() {
         $params = $this->getHourAndDayAsName();
-     
+        $duedate = null;
         if ( $this->isInWorkday($params[0]) && $this->isWorktime($params[1])) {
-            $enoughTime = $this->enoughttime($params[1],$params[2]);
-        }
+           $duedate = $this->enoughttime($params[1],$params[2]);
+        } 
+       $duedate = $this->outdatecalc($params);
     }
 
     protected function enoughttime($hour,$minute)
     {
-       
+       //@todo
     }
+    
     
     
     protected function getHourAndDayAsName() {
