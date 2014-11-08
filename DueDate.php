@@ -14,7 +14,7 @@ class DueDate {
          * 2. check the hour is between range 
          * if the time is larger than 16:59 get the next time
          */
-        $this->ttime = $pTurnaroundTime;
+        $this->turnaroundtime = $pTurnaroundTime;
         $this->timestamp = $timestamp;
         $this->init();
     }
@@ -29,6 +29,11 @@ class DueDate {
     }
 
     protected function enoughttime($hour,$minute)
+    {
+       //@todo
+    }
+    
+     protected function outdatecalc($params)
     {
        //@todo
     }
